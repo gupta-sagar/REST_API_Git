@@ -1,0 +1,19 @@
+1. Write code for listBranches in a given repo under an owner. See list branches
+Ans.
+curl --request GET -H "Authorization: token <secret token>" https://api.github.com/user/repos/<username>/<repo_name>/branches
+
+2. Write code for create a new repo.
+Ans.
+curl -XPOST -H 'Authorization: token <secret token>' -d '{"name":"API_Check","description":"First repo using API","private":true}' https://api.github.com/user/repos
+
+3. Write code for creating an issue for an existing repo.
+Ans.
+curl -XPOST -H 'Authorization: token <secret token>' -d '{"title":"first issue using API","body":"Testing of API"}' https://api.github.com/user/repos/<username>/<repo_name>/issues
+
+4. Write code for editing a repo to enable wiki support.
+Ans.
+curl --request PATCH -H "Authorization: token <secret token>" --data '{"name":"API_Check","has_wiki":true}' https://api.github.com/user/repos/<username>/<repo_name>
+
+5. Write code for listing reactions from a github issue.
+Ans.
+curl --request GET -H "Accept: application/vnd.github.squirrel-girl-preview" -H "Authorization: token <secret token>" https://api.github.com/user/repos/sgupta31/<username>/<repo_name>/<issue_number>/reactions
