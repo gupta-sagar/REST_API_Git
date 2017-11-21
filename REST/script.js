@@ -9,7 +9,7 @@ var request = require('request');
 var fs = require("fs");
 var Promise = require('bluebird');
 var parse = require('parse-link-header');
-var token = "token " + process.env.GITHUB_NCSU_TOKEN;
+var token = "token " + process.env.GITHUB_TOKEN;
 var userId = "gupta-sagar";
 var urlRoot = "https://api.github.com";
 
